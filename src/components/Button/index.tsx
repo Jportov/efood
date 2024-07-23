@@ -4,21 +4,17 @@ type Props = {
   title: string
   to?: string
   onClick?: () => void
-  children: string
+  children?: string
 }
-const Button = ({ type, title, to, onClick, children }: Props) => {
+const Button = ({ type, title, to, onClick }: Props) => {
   if (type === 'button') {
     return (
       <ButtonContainer type="button" title={title} onClick={onClick}>
-        {children}
+        Adicionar ao Carrinho
       </ButtonContainer>
     )
   }
-  return (
-    <ButtonLink to={to as string} title={title}>
-      {children}
-    </ButtonLink>
-  )
+  return <ButtonLink to={to as string} title={title}></ButtonLink>
 }
 
 export default Button

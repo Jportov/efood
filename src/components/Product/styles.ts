@@ -1,21 +1,22 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
+import { cores } from '../../styles'
 
 export const Card = styled.div`
-  background-color: ${cores.laranja};
-  border: solid ${cores.laranja};
-  padding: 3px;
+  width: 320px;
+  height: 338px;
+  padding: 8px;
   position: relative;
-  color: ${cores.branca};
-  margin: 10px;
-
-  ${TagContainer} {
-    margin-right: 8px;
+  margin: 20px;
+  aling-items: center;
+  img {
+    width: 98%;
+    height: 40%;
   }
 `
 
 export const Titulo = styled.h3`
+  margin-left: 10px;
   font-weight: bold;
   font-size: 16px;
   display: block;
@@ -27,6 +28,7 @@ export const Descricao = styled.p`
   line-height: 22px;
   display: block;
   margin-top: 16px;
+  margin-left: 10px;
 `
 export const Infos = styled.div`
   position: absolute;

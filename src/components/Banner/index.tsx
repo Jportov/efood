@@ -1,31 +1,34 @@
-import { Imagem, ImagemHero, SubtituloHero, Titulo, TituloHero } from './styles'
-import fundoImg from '../../assets/images/fundo.png'
-import LogoImg from '../../assets/images/logo.png'
+import { Imagem, Titulo, Precos, Overlay, TituloH, ImagemHero } from './styles'
+import fundo from '../../assets/images/fundo.png'
 import heroImg from '../../assets/images/hero.png'
+import logo from '../../assets/images/logo.png'
 import { Link } from 'react-router-dom'
 
 const Banner = () => (
-  <ImagemHero style={{ backgroundImage: `url(${heroImg})` }}>
+  <Imagem style={{ backgroundImage: `url(${heroImg})` }}>
     <div className="container">
-      <div className="overlay">
-        <SubtituloHero>Italiana</SubtituloHero>
-        <TituloHero>La Dolce Vita Trattoria</TituloHero>
-      </div>
-    </div>
-  </ImagemHero>
-)
-export default Banner
-export const BannerCategory = () => (
-  <Imagem style={{ backgroundImage: `url(${fundoImg})` }}>
-    <div className="container">
-      <Link to="/">
-        <img src={LogoImg} alt="Efood" />
-      </Link>
-      <div>
-        <Titulo>
-          Viva experiências gastronômicas <br /> no conforto da sua casa
-        </Titulo>
-      </div>
+      <Overlay>
+        <div className="conteudo">
+          <Precos>Italiana</Precos>
+          <Titulo>La Dolcae Vita Trattoria</Titulo>
+        </div>
+      </Overlay>
     </div>
   </Imagem>
+)
+
+export default Banner
+
+export const BannerCategoru = () => (
+  <ImagemHero style={{ backgroundImage: `url(${fundo})` }}>
+    <div className="container">
+      <Link to="/">
+        <img src={logo} alt="EPLAY" />
+      </Link>
+      <TituloH>
+        Viva experiências gastronômicas
+        <br /> no conforto da sua casa
+      </TituloH>
+    </div>
+  </ImagemHero>
 )

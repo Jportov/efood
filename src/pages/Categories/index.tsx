@@ -1,75 +1,84 @@
-import ProductList from '../../components/ProductList'
-import Game from '../../models/Game'
-import pratoDois from '../../assets/images/image 1.png'
-import pratoUm from '../../assets/images/imagem.png'
-import { BannerCategory } from '../../components/Banner'
-
-const rpg: Game[] = [
+import { ProductResta } from '../../components/ProductList'
+import Restaurante from '../../models/Game'
+import sushi from '../../assets/images/image 1.png'
+import estrela from '../../assets/images/logo.png'
+import { BannerCategoru } from '../../components/Banner'
+const Restaurantes: Restaurante[] = [
   {
     id: 1,
-    category: 'Ação',
     description:
-      'Prato 1, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Prato 1',
-    system: 'Xbox Series S/X - PS5',
-    infos: ['10%', 'R$ 250,00'],
-    image: pratoDois
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+    title: 'Hioki sushi',
+    system: '4.9',
+    infos: ['Destaque da semana', 'Japonesa'],
+    image: sushi,
+    imageN: '',
+    category: ''
   },
   {
     id: 2,
-    category: 'Esporte',
-    description: '',
-    title: 'Prato 2',
-    system: 'Windows',
-    infos: ['5%', 'R$ 290,00'],
-    image: pratoUm
+    category: '',
+    description:
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+    title: 'La Dolce Vita Trattoria',
+    system: '4.9',
+    infos: ['Italiana'],
+    image: sushi,
+    imageN: ''
   },
   {
     id: 3,
-    category: 'Ação',
+    category: '',
     description:
-      'Prato 1, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Prato 1',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: pratoDois
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+    title: 'La Dolce Vita Trattoria',
+    system: '4.9',
+    infos: ['Italiana'],
+    image: sushi,
+    imageN: ''
   },
   {
     id: 4,
-    category: 'Esporte',
+    category: '',
     description:
-      'EA SPORTS™ Prato 2 traz o Jogo de Todo Mundo aos gramados com a tecnologia HyperMotion2...',
-    title: 'Prato 2',
-    system: 'Xbox Series S/X - PS5',
-    infos: ['5%', 'R$ 290,00'],
-    image: pratoUm
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+    title: 'La Dolce Vita Trattoria',
+    system: '4.9',
+    infos: ['Italiana'],
+    image: sushi,
+    imageN: ''
   },
   {
-    id: 4,
-    category: 'Esporte',
+    id: 5,
+    category: '',
     description:
-      'EA SPORTS™ Prato 2 traz o Jogo de Todo Mundo aos gramados com a tecnologia HyperMotion2...',
-    title: 'Prato 2',
-    system: 'Xbox Series S/X - PS5',
-    infos: ['5%', 'R$ 290,00'],
-    image: pratoUm
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+    title: 'La Dolce Vita Trattoria',
+    system: '4.9',
+    infos: ['Italiana'],
+    image: sushi,
+    imageN: ''
   },
   {
-    id: 4,
-    category: 'Esporte',
+    id: 6,
+    category: '',
     description:
-      'EA SPORTS™ Prato 2 traz o Jogo de Todo Mundo aos gramados com a tecnologia HyperMotion2...',
-    title: 'Prato 2',
-    system: 'Xbox Series S/X - PS5',
-    infos: ['5%', 'R$ 290,00'],
-    image: pratoUm
+      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+    title: 'La Dolce Vita Trattoria',
+    system: '4.9',
+    infos: ['Italiana'],
+    image: sushi,
+    imageN: ''
   }
 ]
-
 const Categories = () => (
   <>
-    <BannerCategory />
-    <ProductList title="Pratos" background="gray" games={rpg} />
+    <BannerCategoru />
+    <ProductResta
+      title="Restaurantes"
+      background="black"
+      games={Restaurantes}
+    />
   </>
 )
 

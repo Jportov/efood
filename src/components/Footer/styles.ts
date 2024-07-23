@@ -2,52 +2,36 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Container = styled.footer`
-  background-color: ${cores.cinzaClaro};
+  background-color: ${cores.bege};
   padding: 32px 0;
   font-size: 14px;
-  color: ${cores.laranja};
-  max-width: 100%;
-  max-height: 100%;
-
-  .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
+  disl
 `
 export const SectionTitle = styled.h4`
+  color: ${cores.rosa};
   font-family: Roboto;
   font-size: 10px;
   font-weight: 400;
   line-height: 11.72px;
   text-align: center;
+  padding-top: 80px;
 `
 export const Links = styled.ul`
   display: flex;
-  color: ${cores.laranja};
-  text-align: center;
-  line-height: 42.19px;
-  font-size: 36px;
-  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 32px;
 `
 
 export const Link = styled.a`
-  width: 30px;
-  height: 24px;
-  background-repeat: no-repeat;
-  margin-top: 32px;
-  margin-bottom: 80px;
+  cursor: pointer;
+  color: ${cores.rosa};
+  text-decoration: none;
+  margin-right: 8px;
 `
 export const FooterSection = styled.div`
-  margin-bottom: 64px;
-`
-export const ImagemLogoFooter = styled.div`
-  width: 125px;
-  height: 57.5px;
-
-  background-repeat: no-repeat;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   align-self: center;
 `

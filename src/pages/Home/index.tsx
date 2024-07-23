@@ -1,49 +1,75 @@
-import Header from '../../components/Header'
-import ProductList from '../../components/ProductList'
-import Game from '../../models/Game'
-import resident from '../../assets/images/imagem.png'
-import diablo from '../../assets/images/image 1.png'
 import Banner from '../../components/Banner'
-const promocoes: Game[] = [
+import ProductList from '../../components/ProductList'
+import Pratos from '../../models/Game'
+import pizza1 from '../../assets/images/pizza.png'
+import Header from '../../components/Header'
+
+const promocoes: Pratos[] = [
   {
     id: 1,
-    category: 'Ação',
+    category: '',
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
-    system: 'Xbox Series S/X - PS5',
-    infos: ['10%', 'R$ 250,00'],
-    image: resident
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: '',
+    infos: ['', ''],
+    image: pizza1,
+    imageN: ''
   },
   {
-    id: 2,
-    category: 'Esporte',
+    id: 1,
+    category: '',
     description:
-      'EA SPORTS™ FIFA 23 traz o Jogo de Todo Mundo aos gramados com a tecnologia HyperMotion2...',
-    title: 'FIFA 23',
-    system: 'Windows',
-    infos: ['5%', 'R$ 290,00'],
-    image: resident
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: '',
+    infos: ['', ''],
+    image: pizza1,
+    imageN: ''
   },
   {
-    id: 3,
-    category: 'Ação',
+    id: 1,
+    category: '',
     description:
-      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: diablo
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: '',
+    infos: ['', ''],
+    image: pizza1,
+    imageN: ''
   },
   {
-    id: 4,
-    category: 'Esporte',
+    id: 1,
+    category: '',
     description:
-      'EA SPORTS™ FIFA 23 traz o Jogo de Todo Mundo aos gramados com a tecnologia HyperMotion2...',
-    title: 'FIFA 23',
-    system: 'Xbox Series S/X - PS5',
-    infos: ['5%', 'R$ 290,00'],
-    image: diablo
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: '',
+    infos: ['', ''],
+    image: pizza1,
+    imageN: ''
+  },
+  {
+    id: 1,
+    category: '',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: '',
+    infos: ['', ''],
+    image: pizza1,
+    imageN: ''
+  },
+  {
+    id: 1,
+    category: '',
+    description:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    title: 'Pizza Marguerita',
+    system: '',
+    infos: ['', ''],
+    image: pizza1,
+    imageN: ''
   }
 ]
 
@@ -51,7 +77,7 @@ const Home = () => (
   <>
     <Header />
     <Banner />
-    <ProductList title="Pratos" background="gray" games={promocoes} />
+    <ProductList title="Promoções" background="gray" games={promocoes} />
   </>
 )
 

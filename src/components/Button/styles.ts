@@ -6,14 +6,21 @@ export const ButtonContainer = styled.button`
   background-color: ${cores.bege};
   color: ${cores.rosa};
   border: 2px solid ${cores.branca};
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   padding: 8px 16px;
   cursor: pointer;
 
   width: 95%;
+
   margin: 10px;
   align-self: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+  }
 `
 export const ButtonLinkA = styled.button`
   background-color: ${cores.rosa};
@@ -25,7 +32,6 @@ export const ButtonLinkA = styled.button`
   font-size: 12px;
   font-weight: 700;
   line-height: 16.41px;
-
   border: none;
 `
 export const ButtonLink = styled(Link)`

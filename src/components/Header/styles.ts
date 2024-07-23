@@ -10,7 +10,7 @@ export const HeaderBar = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+  }
   a {
     color: ${cores.rosa};
     text-decoration: none;
@@ -21,10 +21,27 @@ export const HeaderBar = styled.header`
     display: flex;
     align-items: center;
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 0px;
+  }
+  img {
+    width: 50px;
+    margin-right: 20px;
+  }
 `
 export const Links = styled.ul`
   display: flex;
   margin-left: 40px;
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
 `
 
 export const LinksItem = styled.li`

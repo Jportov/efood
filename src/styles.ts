@@ -29,4 +29,20 @@ body {
   .container {
   max-width: 1024px;
   width: 100%;
-  margin: 0 auto;}`
+  margin: 0 auto;}
+
+  @media screen and (max-width: 768px) {
+    body {
+      width:100%;
+      max-width:100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      background-color: ${cores.branca};
+    }
+
+    .container {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+`

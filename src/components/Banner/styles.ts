@@ -9,6 +9,14 @@ export const Imagem = styled.div`
   height: 280px;
   background-size: cover;
   background-image: url(${heroImg});
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding:
+    line-height: 12px;
+
+  }
 `
 
 export const Overlay = styled.div`
@@ -29,6 +37,21 @@ export const Overlay = styled.div`
     margin: 0 auto;
     padding: 50px;
   }
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px;
+
+  }
 `
 
 export const ConteudoOverlay = styled.div`
@@ -47,6 +70,12 @@ export const Titulo = styled.h2`
   line-height: 37.5px;
   text-align: center;
   padding-top: 90px;
+  @media screen and (max-width: 768px) {
+    font-weight: 900;
+    font-size: 20px;
+    padding-top: 150px;
+    text-align: center;
+  }
 `
 export const TituloH = styled.h2`
   color: ${cores.rosa};
@@ -56,6 +85,11 @@ export const TituloH = styled.h2`
   line-height: 37.5px;
   text-align: center;
   padding-top: 90px;
+  @media screen and (max-width: 768px) {
+    font-size: 4px;
+    line-height: 28px;
+    padding-top: 0px;
+  }
 `
 
 export const Precos = styled.p`

@@ -12,14 +12,7 @@ type Props = {
   imageN: string
 }
 
-const ProductHome = ({
-  title,
-  description,
-  infos,
-  image,
-  system,
-  imageN
-}: Props) => (
+const ProductHome = ({ title, description, infos, image, system }: Props) => (
   <div className="container">
     <CardRest>
       <img className="imgPrato" src={image} alt={title} />
@@ -34,8 +27,8 @@ const ProductHome = ({
         <ImgNota src={estrela} />
       </TituloN>
       <Descricao>{description}</Descricao>
-      <ButtonLinkA type={'button'} title={''}>
-        Saiba Mais
+      <ButtonLinkA type={'button'} title={'Saba mais'}>
+        <a href="/categories">Saiba mais</a>
       </ButtonLinkA>
     </CardRest>
   </div>

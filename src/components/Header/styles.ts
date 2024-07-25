@@ -2,11 +2,12 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const HeaderBar = styled.header`
-
-  padding: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+  height: 125px;
   .container {
     display: flex;
     align-items: center;
@@ -23,8 +24,7 @@ export const HeaderBar = styled.header`
     align-items: center;
   }
   img {
-    width: 125px;
-    max-width:100%
+    width: 12px;
     height: 57px;
   }
 
@@ -40,7 +40,6 @@ export const HeaderBar = styled.header`
   }
 
   img {
-    margin-right: 20px;
     width: 100%;
   }
 `
@@ -54,7 +53,6 @@ export const Links = styled.ul`
 `
 
 export const LinksItem = styled.li`
-  margin-right: 16px;
   font-size: 18px;
 `
 export const LinkCart = styled.a`

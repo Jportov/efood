@@ -6,13 +6,10 @@ import { Link } from 'react-router-dom'
 
 const Banner = () => (
   <Imagem style={{ backgroundImage: `url(${heroImg})` }}>
+    <Overlay />
     <div className="container">
-      <Overlay>
-        <div className="conteudo">
-          <Precos>Italiana</Precos>
-          <Titulo>La Dolcae Vita Trattoria</Titulo>
-        </div>
-      </Overlay>
+      <Precos>Italiana</Precos>
+      <Titulo>La Dolcae Vita Trattoria</Titulo>
     </div>
   </Imagem>
 )

@@ -1,14 +1,16 @@
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import cart from "../../../assets/images/cart.png";
 import { RootReducer } from "../../../store";
-
-import {
-  HeaderContainer,
-  PerfilList,
-  ContainerPerfil,
-  ImaLogo,
-} from "./styles";
 import BannerPerfil from "../BannerPerfil";
+import {
+  CartButton,
+  ContainerPerfil,
+  HeaderContainer,
+  ImaLogo,
+  PerfilList,
+  SpanNotification,
+} from "./styles";
 
 import Logo from "../../../assets/images/logo.png";
 
@@ -38,7 +40,12 @@ const HeaderPerfil = ({ restaurante }: Props) => {
               <ImaLogo src={Logo} alt="" />
             </Link>
           </li>
-          <li onClick={OpenCart}>{items.length} produto(s) no carrinho</li>
+          <CartButton onClick={OpenCart}>
+            {items.length > 0 && (
+              <SpanNotification>{items.length}</SpanNotification>
+            )}
+            <img src={cart} alt="Cesta de Compras" />
+          </CartButton>
         </PerfilList>
       </ContainerPerfil>
       <BannerPerfil

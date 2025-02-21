@@ -1,26 +1,26 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { RootReducer } from '../../../store'
-import { useValorTotal } from '../../../Uteis'
+import { useDispatch, useSelector } from "react-redux";
+import { RootReducer } from "../../../store";
+import { useValorTotal } from "../../../Uteis";
 
-import Lixeira from '../../../assets/images/Lixeira.png'
-import { remove } from '../../../store/reducer/cart'
-import { ButtonPerfil } from '../ButtonPerfil/styled'
-import { Cards, ImgFechar, ImgPrato, Valor } from '../Carrinho/styles'
-import { ContainerRec } from '../Formulario/styles'
+import Lixeira from "../../../assets/images/Lixeira.png";
+import { remove } from "../../../store/reducer/cart";
+import { ButtonPerfil } from "../ButtonPerfil/styled";
+import { Cards, ImgFechar, ImgPrato, Valor } from "../Carrinho/styles";
+import { ContainerRec } from "../Formulario/styles";
 
 interface ItensCarrinhoProps {
-  avancaParaEntrega: () => void
+  avancaParaEntrega: () => void;
 }
 
 const ItensCarrinho = ({ avancaParaEntrega }: ItensCarrinhoProps) => {
-  const dispatch = useDispatch()
-  const { items } = useSelector((state: RootReducer) => state.cart)
+  const dispatch = useDispatch();
+  const { items } = useSelector((state: RootReducer) => state.cart);
 
   const removeItem = (id: number) => {
-    dispatch(remove(id))
-  }
+    dispatch(remove(id));
+  };
 
-  const Total = useValorTotal()
+  const Total = useValorTotal();
 
   return (
     <>
@@ -37,7 +37,7 @@ const ItensCarrinho = ({ avancaParaEntrega }: ItensCarrinhoProps) => {
                 <div>
                   <h3>{item.nome}</h3>
                   <span>
-                    {parseFloat(item.preco).toFixed(2).replace('.', ',')}
+                    {parseFloat(item.preco).toFixed(2).replace(".", ",")}
                   </span>
                   <ImgFechar
                     onClick={() => removeItem(item.id)}
@@ -58,7 +58,7 @@ const ItensCarrinho = ({ avancaParaEntrega }: ItensCarrinhoProps) => {
         </>
       )}
     </>
-  )
-}
+  );
+};
 
-export default ItensCarrinho
+export default ItensCarrinho;

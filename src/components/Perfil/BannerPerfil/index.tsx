@@ -1,8 +1,8 @@
-import { Banner, Paragrafo } from './styles'
+import { Banner, Paragrafo } from "./styles";
 
-import { Restaurante } from '../../../types/Restaurante'
+import { Restaurante } from "../../../types/Restaurante";
 
-export type BannerProps = Pick<Restaurante, 'capa' | 'tipo' | 'titulo'>
+export type BannerProps = Pick<Restaurante, "capa" | "tipo" | "titulo">;
 
 const BannerPerfil = ({ capa, titulo, tipo }: BannerProps) => (
   <Banner style={{ backgroundImage: `url(${capa})` }}>
@@ -13,6 +13,6 @@ const BannerPerfil = ({ capa, titulo, tipo }: BannerProps) => (
       </div>
     </div>
   </Banner>
-)
+);
 
-export default BannerPerfil
+export default BannerPerfil;

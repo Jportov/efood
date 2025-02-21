@@ -1,12 +1,12 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export const cores = {
   amarelo: "#FFB930",
   branca: "#FFFFFF",
   fundoBody: "#FFF8F2",
   trigo: "#FFEBD9",
-  salmao: "#E66767"
-}
+  salmao: "#E66767",
+};
 
 export const GlobalCss = createGlobalStyle`
   * {
@@ -28,4 +28,4 @@ export const GlobalCss = createGlobalStyle`
     border-radius: 8px; /* Adiciona bordas arredondadas */
     padding: 0 16px; /* Adiciona padding para melhorar a responsividade */
   }
-`
+`;

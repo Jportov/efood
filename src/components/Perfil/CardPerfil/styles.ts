@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import { cores } from "../../../styles"
-import { breakpoints } from "../../Home/CardapioList/styles"
-import { ButtonPerfil } from "../ButtonPerfil/styled"
+import { cores } from "../../../styles";
+import { breakpoints } from "../../Home/CardapioList/styles";
+import { ButtonPerfil } from "../ButtonPerfil/styled";
 
 export const CardContainer = styled.div`
   max-width: 320px;
@@ -34,7 +34,7 @@ export const CardContainer = styled.div`
     margin: 0 auto;
     margin-bottom: 8%;
   }
-`
+`;
 
 export const DescriptionPerfil = styled.div`
   font-size: 14px;
@@ -48,7 +48,7 @@ export const DescriptionPerfil = styled.div`
     font-size: 16px;
     line-height: 19px;
   }
-`
+`;
 
 export const Modal = styled.div`
   position: fixed;
@@ -75,7 +75,7 @@ export const Modal = styled.div`
     opacity: 0.5;
     content: "";
   }
-`
+`;
 
 export const PerfilModal = styled.div`
   position: relative;
@@ -95,7 +95,7 @@ export const PerfilModal = styled.div`
     width: 80%; /* Adjusted width for responsiveness */
     height: auto; /* Updated height for responsiveness */
   }
-`
+`;
 export const PerfilDetails = styled.div`
   color: ${cores.branca};
   margin: 0;
@@ -114,7 +114,7 @@ export const PerfilDetails = styled.div`
     background-color: ${cores.trigo};
     border-radius: 8px; /* Adiciona bordas arredondadas */
   }
-`
+`;
 export const ImageFechar = styled.img`
   position: absolute;
   top: 8px;
@@ -122,7 +122,7 @@ export const ImageFechar = styled.img`
   width: 16px;
   height: 16px;
   cursor: pointer;
-`
+`;
 export const ImagePerfil = styled.img`
   width: 280px;
   height: 280px;
@@ -134,7 +134,7 @@ export const ImagePerfil = styled.img`
     height: 150px;
     padding: 2%;
   }
-`
+`;
 export const BotaoPerfil = styled.button`
   color: ${cores.salmao};
   background-color: ${cores.trigo};
@@ -146,4 +146,4 @@ export const BotaoPerfil = styled.button`
   cursor: pointer;
   border-radius: 8px; /* Adiciona bordas arredondadas */
   border: none; /* Re-adding border property for styling */
-`
+`;

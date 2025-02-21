@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import {
   Borda,
@@ -8,14 +8,14 @@ import {
   ImgCardapio,
   ImgEstrela,
   Nota,
-  TextCardapio
-} from './styles'
+  TextCardapio,
+} from "./styles";
 
-import Estrela from '../../../assets/images/estrela.png'
-import { Restaurante } from '../../../types/Restaurante'
-import Tag from '../Tag'
+import Estrela from "../../../assets/images/estrela.png";
+import { Restaurante } from "../../../types/Restaurante";
+import Tag from "../Tag";
 
-type Props = Omit<Restaurante, 'cardapio'>
+type Props = Omit<Restaurante, "cardapio">;
 
 const Cardapio = ({
   tipo,
@@ -24,23 +24,23 @@ const Cardapio = ({
   avaliacao,
   capa,
   id,
-  destacado
+  destacado,
 }: Props) => {
   const limitarDescricao = (descricao: string) => {
     if (descricao.length > 190) {
-      return descricao.substring(0, 190) + '...'
+      return descricao.substring(0, 190) + "...";
     }
 
-    return descricao
-  }
+    return descricao;
+  };
 
   return (
     <>
       <CardCadapio>
         <ImgCardapio capa={capa}>
           <Etiqueta>
-            <Tag style={destacado ? {} : { backgroundColor: 'transparent' }}>
-              {destacado ? 'Destaque' : ''}
+            <Tag style={destacado ? {} : { backgroundColor: "transparent" }}>
+              {destacado ? "Destaque" : ""}
             </Tag>
             <Tag>{tipo}</Tag>
           </Etiqueta>
@@ -61,7 +61,7 @@ const Cardapio = ({
         </Borda>
       </CardCadapio>
     </>
-  )
-}
+  );
+};
 
-export default Cardapio
+export default Cardapio;

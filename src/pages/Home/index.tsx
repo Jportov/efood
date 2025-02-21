@@ -1,11 +1,11 @@
-import CardapioList from '../../components/Home/CardapioList'
-import Footer from '../../components/Home/Footer'
-import Hero from '../../components/Home/Hero'
+import CardapioList from "../../components/Home/CardapioList";
+import Footer from "../../components/Home/Footer";
+import Hero from "../../components/Home/Hero";
 
-import { useGetFeatureRestaurantesQuery } from '../../services/api'
+import { useGetFeatureRestaurantesQuery } from "../../services/api";
 
 const Home = () => {
-  const { data: home } = useGetFeatureRestaurantesQuery()
+  const { data: home } = useGetFeatureRestaurantesQuery();
 
   if (home) {
     return (
@@ -14,9 +14,9 @@ const Home = () => {
         <CardapioList restaurante={home} />
         <Footer />
       </>
-    )
+    );
   }
-  return <h3>Carregando...</h3>
-}
+  return <h3>Carregando...</h3>;
+};
 
-export default Home
+export default Home;

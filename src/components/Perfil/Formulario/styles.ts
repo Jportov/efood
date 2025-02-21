@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { cores } from '../../../styles'
-import { ButtonPerfil } from '../ButtonPerfil/styled'
+import styled from "styled-components";
+import { cores } from "../../../styles";
+import { ButtonPerfil } from "../ButtonPerfil/styled";
 
 export const ContentFormulario = styled.div`
   color: ${cores.trigo};
@@ -31,29 +31,29 @@ export const ContentFormulario = styled.div`
     margin-bottom: 8px;
     border-radius: 8px; /* Adiciona bordas arredondadas */
   }
-`
+`;
 export const Ajuste = styled.div`
   display: flex;
   justify-content: space-between;
   column-gap: 34px;
 
   >div: margin-right: 10px;
-`
+`;
 export const Subtitulo = styled.h3`
   color: ${cores.trigo};
   margin-bottom: 16px;
-`
+`;
 export const Buttondiv = styled.div`
   margin-top: 24px;
   margin-bottom: 8px;
-`
+`;
 export const Visivel = styled.div`
   display: none;
 
   &.is-open {
     display: block;
   }
-`
+`;
 export const ContainerRec = styled.div`
   color: ${cores.trigo};
   h3 {
@@ -69,7 +69,7 @@ export const ContainerRec = styled.div`
     line-height: 22px;
     margin-bottom: 24px;
   }
-`
+`;
 export const ButtonRecibo = styled.button`
   color: ${cores.salmao};
   background-color: ${cores.trigo};
@@ -80,4 +80,4 @@ export const ButtonRecibo = styled.button`
   font-size: 14px;
   text-align: center;
   cursor: pointer;
-`
+`;

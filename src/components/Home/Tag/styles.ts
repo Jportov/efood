@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { cores } from '../../../styles'
+import styled from "styled-components";
+import { cores } from "../../../styles";
 
 export const TagContainer = styled.div<{ destacado?: boolean }>`
   margin-right: 8px;
@@ -11,4 +11,4 @@ export const TagContainer = styled.div<{ destacado?: boolean }>`
   display: inline-block;
   background-color: ${(props) => (props.destacado ? 1 : 0)};
   border-radius: 8px;
-`
+`;

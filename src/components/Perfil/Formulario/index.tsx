@@ -1,14 +1,14 @@
-import { useDispatch } from 'react-redux'
-import { useEffect, useState } from 'react'
-import { useFormik } from 'formik'
-import * as Yup from 'yup'
+import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
-import InputMask from 'react-input-mask'
-import { usePurchaseMutation } from '../../../services/api'
-import { useValorTotal } from '../../../Uteis'
-import { ButtonPerfil } from '../ButtonPerfil/styled'
-import { close, clear } from '../../../store/reducer/cart'
-import { Prato } from '../../../types/Restaurante'
+import InputMask from "react-input-mask";
+import { usePurchaseMutation } from "../../../services/api";
+import { useValorTotal } from "../../../Uteis";
+import { ButtonPerfil } from "../ButtonPerfil/styled";
+import { close, clear } from "../../../store/reducer/cart";
+import { Prato } from "../../../types/Restaurante";
 
 import {
   Ajuste,
@@ -16,68 +16,68 @@ import {
   ContainerRec,
   ContentFormulario,
   Subtitulo,
-  Visivel
-} from './styles'
+  Visivel,
+} from "./styles";
 
-type PratoSimples = Pick<Prato, 'id' | 'preco'>
+type PratoSimples = Pick<Prato, "id" | "preco">;
 
 type CampoFormulario =
-  | 'receiver'
-  | 'description'
-  | 'city'
-  | 'zipCode'
-  | 'number'
-  | 'complement'
-  | 'cardName'
-  | 'cardNumber'
-  | 'code'
-  | 'month'
-  | 'year'
+  | "receiver"
+  | "description"
+  | "city"
+  | "zipCode"
+  | "number"
+  | "complement"
+  | "cardName"
+  | "cardNumber"
+  | "code"
+  | "month"
+  | "year";
 
 interface FormProps {
-  avancaParaCarrinho: () => void
-  setMostrarImagemFechar: (mostar: boolean) => void
-  pratos: PratoSimples[]
+  avancaParaCarrinho: () => void;
+  setMostrarImagemFechar: (mostar: boolean) => void;
+  pratos: PratoSimples[];
 }
 
 const Formulario = ({
   avancaParaCarrinho,
   setMostrarImagemFechar,
-  pratos
+  pratos,
 }: FormProps) => {
-  const [purchase, { isError, isLoading, data }] = usePurchaseMutation()
+  const [purchase, { isError, isLoading, data }] = usePurchaseMutation();
 
   const form = useFormik({
     initialValues: {
-      receiver: '',
-      description: '',
-      city: '',
-      zipCode: '',
-      number: '',
-      complement: '',
-      cardName: '',
-      cardNumber: '',
-      code: '',
-      month: '',
-      year: ''
+      receiver: "",
+      description: "",
+      city: "",
+      zipCode: "",
+      number: "",
+      complement: "",
+      cardName: "",
+      cardNumber: "",
+      code: "",
+      month: "",
+      year: "",
     },
     validationSchema: Yup.object({
-      receiver: Yup.string().required('O campo é obrigatório'),
-      description: Yup.string().required('O campo é obrigatório'),
-      city: Yup.string().required('O campo é obrigatório'),
-      zipCode: Yup.string().required('O campo é obrigatório'),
-      number: Yup.number().required('O campo é obrigatório'),
-      cardName: Yup.string().required('O campo é obrigatório'),
-      cardNumber: Yup.number().required('O campo é obrigatório'),
-      code: Yup.number().required('O campo é obrigatório'),
+      receiver: Yup.string().required("O campo é obrigatório"),
+      description: Yup.string().required("O campo é obrigatório"),
+      city: Yup.string().required("O campo é obrigatório"),
+      zipCode: Yup.string().required("O campo é obrigatório"),
+      number: Yup.number().required("O campo é obrigatório"),
+      cardName: Yup.string().required("O campo é obrigatório"),
+      cardNumber: Yup.number().required("O campo é obrigatório"),
+      code: Yup.number().required("O campo é obrigatório"),
       month: Yup.number()
-        .required('O campo é obrigatório')
-        .min(1, '')
-        .max(12, ''),
-      year: Yup.number().required('O campo é obrigatório')
+        .required("O campo é obrigatório")
+        .min(1, "")
+        .max(12, ""),
+      year: Yup.number().required("O campo é obrigatório"),
     }),
     onSubmit: (values) => {
-      console.log(values)
+      console.log(values);
       purchase({
         delivery: {
           receiver: values.receiver,
@@ -86,8 +86,8 @@ const Formulario = ({
             city: values.city,
             zipCode: values.zipCode,
             number: Number(values.number),
-            complement: values.complement
-          }
+            complement: values.complement,
+          },
         },
         payment: {
           card: {
@@ -96,88 +96,88 @@ const Formulario = ({
             code: Number(values.code),
             expires: {
               month: Number(values.month),
-              year: Number(values.year)
-            }
-          }
+              year: Number(values.year),
+            },
+          },
         },
         products: pratos.map((prato) => ({
           id: prato.id,
-          price: prato.preco
-        }))
+          price: prato.preco,
+        })),
       }).then(() => {
-        setMostrarImagemFechar(false)
-      })
-    }
-  })
+        setMostrarImagemFechar(false);
+      });
+    },
+  });
 
-  const Total = useValorTotal()
+  const Total = useValorTotal();
 
-  const [formularioAtivo, setFormularioAtivo] = useState('entrega')
+  const [formularioAtivo, setFormularioAtivo] = useState("entrega");
 
   const avancaParaPagamento = () => {
     const camposObrigatorios: CampoFormulario[] = [
-      'receiver',
-      'description',
-      'city',
-      'zipCode',
-      'number'
-    ]
+      "receiver",
+      "description",
+      "city",
+      "zipCode",
+      "number",
+    ];
 
     const todosCamposValidos = camposObrigatorios.every((campo) => {
-      const campoFoiTocado = form.touched[campo] // Agora o TypeScript sabe que `campo` é um CampoFormulario
-      const campoNaoPossuiErro = !form.errors[campo] // Mesmo aqui
-      return campoFoiTocado && campoNaoPossuiErro
-    })
+      const campoFoiTocado = form.touched[campo]; // Agora o TypeScript sabe que `campo` é um CampoFormulario
+      const campoNaoPossuiErro = !form.errors[campo]; // Mesmo aqui
+      return campoFoiTocado && campoNaoPossuiErro;
+    });
 
     if (todosCamposValidos) {
-      setFormularioAtivo('pagamento')
+      setFormularioAtivo("pagamento");
     } else {
       form.validateForm().then(() => {
         const touchedFields = camposObrigatorios.reduce((acc, campo) => {
-          acc[campo] = true // O TypeScript entende que `acc` e `campo` são compatíveis
-          return acc
-        }, {} as { [key in CampoFormulario]?: boolean }) // Isso assegura que `acc` é tratado como um objeto com chaves do tipo CampoFormulario
-        form.setTouched(touchedFields)
-      })
+          acc[campo] = true; // O TypeScript entende que `acc` e `campo` são compatíveis
+          return acc;
+        }, {} as { [key in CampoFormulario]?: boolean }); // Isso assegura que `acc` é tratado como um objeto com chaves do tipo CampoFormulario
+        form.setTouched(touchedFields);
+      });
     }
-  }
+  };
 
   const RetornaParaEntrega = () => {
-    setFormularioAtivo('entrega')
-  }
+    setFormularioAtivo("entrega");
+  };
 
   const Recibo = () => {
-    setFormularioAtivo('recibo')
-  }
+    setFormularioAtivo("recibo");
+  };
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const CloseCart = () => {
-    dispatch(close())
-  }
+    dispatch(close());
+  };
 
   const ClearCart = () => {
-    dispatch(clear())
-  }
+    dispatch(clear());
+  };
 
   useEffect(() => {
     if (!isLoading && data && !isError) {
-      console.log('Dados da Resposta:', data)
-      Recibo()
+      console.log("Dados da Resposta:", data);
+      Recibo();
     }
-  }, [isLoading, data, isError])
+  }, [isLoading, data, isError]);
 
   const checkInputError = (fildName: string) => {
-    const estaAlterado = fildName in form.touched
-    const estaInvalido = fildName in form.errors
-    const hasError = estaAlterado && estaInvalido
+    const estaAlterado = fildName in form.touched;
+    const estaInvalido = fildName in form.errors;
+    const hasError = estaAlterado && estaInvalido;
 
-    return hasError
-  }
+    return hasError;
+  };
 
   return (
     <form onSubmit={form.handleSubmit}>
-      <Visivel className={formularioAtivo === 'entrega' ? 'is-open' : ''}>
+      <Visivel className={formularioAtivo === "entrega" ? "is-open" : ""}>
         <ContentFormulario>
           <label htmlFor="receiver">Quem ira receber</label>
           <input
@@ -187,7 +187,7 @@ const Formulario = ({
             value={form.values.receiver}
             onChange={form.handleChange}
             onBlur={form.handleBlur}
-            className={checkInputError('receiver') ? 'error' : ''}
+            className={checkInputError("receiver") ? "error" : ""}
           />
           <label htmlFor="description">Endereço</label>
           <input
@@ -197,7 +197,7 @@ const Formulario = ({
             value={form.values.description}
             onChange={form.handleChange}
             onBlur={form.handleBlur}
-            className={checkInputError('description') ? 'error' : ''}
+            className={checkInputError("description") ? "error" : ""}
           />
           <label htmlFor="cidade">Cidade</label>
           <input
@@ -207,7 +207,7 @@ const Formulario = ({
             value={form.values.city}
             onChange={form.handleChange}
             onBlur={form.handleBlur}
-            className={checkInputError('city') ? 'error' : ''}
+            className={checkInputError("city") ? "error" : ""}
           />
           <Ajuste>
             <div>
@@ -220,7 +220,7 @@ const Formulario = ({
                 onChange={form.handleChange}
                 onBlur={form.handleBlur}
                 mask="99999-999"
-                className={checkInputError('zipCode') ? 'error' : ''}
+                className={checkInputError("zipCode") ? "error" : ""}
               />
             </div>
             <div>
@@ -232,7 +232,7 @@ const Formulario = ({
                 value={form.values.number}
                 onChange={form.handleChange}
                 onBlur={form.handleBlur}
-                className={checkInputError('number') ? 'error' : ''}
+                className={checkInputError("number") ? "error" : ""}
               />
             </div>
           </Ajuste>
@@ -255,7 +255,7 @@ const Formulario = ({
           </Buttondiv>
         </ContentFormulario>
       </Visivel>
-      <Visivel className={formularioAtivo === 'pagamento' ? 'is-open' : ''}>
+      <Visivel className={formularioAtivo === "pagamento" ? "is-open" : ""}>
         <ContentFormulario>
           <Subtitulo>Pagamento - Valor a pagar R$ {Total}</Subtitulo>
           <label htmlFor="cardName">Nome do cartão</label>
@@ -266,7 +266,7 @@ const Formulario = ({
             value={form.values.cardName}
             onChange={form.handleChange}
             onBlur={form.handleBlur}
-            className={checkInputError('cardName') ? 'error' : ''}
+            className={checkInputError("cardName") ? "error" : ""}
           />
           <Ajuste>
             <div>
@@ -280,7 +280,7 @@ const Formulario = ({
                 onBlur={form.handleBlur}
                 name="cardNumber"
                 value={form.values.cardNumber}
-                className={checkInputError('cardNumber') ? 'error' : ''}
+                className={checkInputError("cardNumber") ? "error" : ""}
                 mask="9999 9999 9999 9999"
               />
             </div>
@@ -292,7 +292,7 @@ const Formulario = ({
                 onChange={form.handleChange}
                 onBlur={form.handleBlur}
                 name="code"
-                className={checkInputError('code') ? 'error' : ''}
+                className={checkInputError("code") ? "error" : ""}
                 mask="999"
               />
             </div>
@@ -306,7 +306,7 @@ const Formulario = ({
                 onChange={form.handleChange}
                 onBlur={form.handleBlur}
                 name="month"
-                className={checkInputError('month') ? 'error' : ''}
+                className={checkInputError("month") ? "error" : ""}
                 mask="99"
               />
             </div>
@@ -318,7 +318,7 @@ const Formulario = ({
                 onChange={form.handleChange}
                 onBlur={form.handleBlur}
                 name="year"
-                className={checkInputError('year') ? 'error' : ''}
+                className={checkInputError("year") ? "error" : ""}
                 mask="9999"
               />
             </div>
@@ -331,7 +331,7 @@ const Formulario = ({
           </Buttondiv>
         </ContentFormulario>
       </Visivel>
-      <Visivel className={formularioAtivo === 'recibo' ? 'is-open' : ''}>
+      <Visivel className={formularioAtivo === "recibo" ? "is-open" : ""}>
         <ContainerRec>
           <h3>Pedido realizado - {data?.orderId}</h3>
           <p>
@@ -354,16 +354,16 @@ const Formulario = ({
         </ContainerRec>
         <ButtonPerfil
           onClick={() => {
-            avancaParaCarrinho()
-            CloseCart()
-            ClearCart()
+            avancaParaCarrinho();
+            CloseCart();
+            ClearCart();
           }}
         >
           Concluido
         </ButtonPerfil>
       </Visivel>
     </form>
-  )
-}
+  );
+};
 
-export default Formulario
+export default Formulario;

@@ -1,27 +1,32 @@
-import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootReducer } from '../../../store'
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { RootReducer } from "../../../store";
 
-import { HeaderContainer, PerfilList, ContainerPerfil, ImaLogo } from './styles'
-import BannerPerfil from '../BannerPerfil'
+import {
+  HeaderContainer,
+  PerfilList,
+  ContainerPerfil,
+  ImaLogo,
+} from "./styles";
+import BannerPerfil from "../BannerPerfil";
 
-import Logo from '../../../assets/images/logo.png'
+import Logo from "../../../assets/images/logo.png";
 
-import { open } from '../../../store/reducer/cart'
-import { Restaurante } from '../../../types/Restaurante'
+import { open } from "../../../store/reducer/cart";
+import { Restaurante } from "../../../types/Restaurante";
 
 type Props = {
-  restaurante: Restaurante
-}
+  restaurante: Restaurante;
+};
 
 const HeaderPerfil = ({ restaurante }: Props) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const OpenCart = () => {
-    dispatch(open())
-  }
+    dispatch(open());
+  };
 
-  const { items } = useSelector((state: RootReducer) => state.cart)
+  const { items } = useSelector((state: RootReducer) => state.cart);
 
   return (
     <HeaderContainer>
@@ -43,6 +48,6 @@ const HeaderPerfil = ({ restaurante }: Props) => {
         titulo={restaurante.titulo}
       />
     </HeaderContainer>
-  )
-}
-export default HeaderPerfil
+  );
+};
+export default HeaderPerfil;

@@ -1,11 +1,11 @@
-import styled from 'styled-components'
-import { cores } from '../../../styles'
-import { breakpoints } from '../CardapioList/styles'
+import styled from "styled-components";
+import { cores } from "../../../styles";
+import { breakpoints } from "../CardapioList/styles";
 
 export const ImgLogo = styled.img`
   margin-top: 40px;
   margin-bottom: 32px;
-`
+`;
 
 export const FooterContainer = styled.div`
   text-align: center;
@@ -15,7 +15,7 @@ export const FooterContainer = styled.div`
   p {
     padding-bottom: 20px;
   }
-`
+`;
 
 export const FooterList = styled.ul`
   justify-content: center;
@@ -29,4 +29,4 @@ export const FooterList = styled.ul`
   @media (max-width: ${breakpoints.tablet}) {
     margin-bottom: 10%;
   }
-`
+`;

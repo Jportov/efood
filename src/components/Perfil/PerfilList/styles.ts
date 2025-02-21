@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { breakpoints } from '../../Home/CardapioList/styles'
+import styled from "styled-components";
+import { breakpoints } from "../../Home/CardapioList/styles";
 
 export const PerfilList = styled.ul`
   display: grid;
@@ -13,9 +13,9 @@ export const PerfilList = styled.ul`
     margin-top: 14%;
     margin-bottom: 12%;
   }
-`
+`;
 export const OpcoesContainer = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     margin: auto;
   }
-`
+`;

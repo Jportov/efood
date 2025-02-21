@@ -1,8 +1,8 @@
-import styled from 'styled-components'
-import { cores } from '../../../styles'
-import { breakpoints } from '../../Home/CardapioList/styles'
-import { ButtonPerfil } from '../ButtonPerfil/styled'
-import { ImageFechar } from '../CardPerfil/styles'
+import styled from "styled-components";
+import { cores } from "../../../styles";
+import { breakpoints } from "../../Home/CardapioList/styles";
+import { ButtonPerfil } from "../ButtonPerfil/styled";
+import { ImageFechar } from "../CardPerfil/styles";
 
 export const Overlay = styled.div`
   position: absolute;
@@ -12,7 +12,7 @@ export const Overlay = styled.div`
   height: 100%;
   background-color: #000;
   opacity: 0.7;
-`
+`;
 export const CartContainer = styled.div`
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@ export const CartContainer = styled.div`
   &.is-open {
     display: flex;
   }
-`
+`;
 export const SideBar = styled.aside`
   background-color: ${cores.salmao};
   width: 360px; /* Updated the width to a standard size */
@@ -65,13 +65,13 @@ export const SideBar = styled.aside`
       right: 8px;
     }
   }
-`
+`;
 
 export const ImgPrato = styled.img`
   width: 80px;
   height: 80px;
   margin-right: 8px;
-`
+`;
 export const ImgFechar = styled.img`
   width: 16px;
   height: 16px;
@@ -79,7 +79,7 @@ export const ImgFechar = styled.img`
   bottom: 8px;
   right: 8px;
   cursor: pointer;
-`
+`;
 export const Valor = styled.ul`
   display: flex;
   color: ${cores.trigo};
@@ -101,7 +101,7 @@ export const Valor = styled.ul`
   ${ButtonPerfil} {
     font-weight: 700;
   }
-`
+`;
 export const Cards = styled.li`
   background-color: ${cores.trigo};
   width: 344px;
@@ -130,4 +130,4 @@ export const Cards = styled.li`
       font-size: 12px;
     }
   }
-`
+`;

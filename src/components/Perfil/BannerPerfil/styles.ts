@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { cores } from '../../../styles'
-import { breakpoints } from '../../Home/CardapioList/styles'
+import styled from "styled-components";
+import { cores } from "../../../styles";
+import { breakpoints } from "../../Home/CardapioList/styles";
 
 export const Banner = styled.div`
   position: relative;
@@ -19,7 +19,7 @@ export const Banner = styled.div`
     top: 0;
     left: 0;
     opacity: 0.5;
-    content: '';
+    content: "";
   }
 
   p {
@@ -36,10 +36,10 @@ export const Banner = styled.div`
       text-align: center;
     }
   }
-`
+`;
 export const Paragrafo = styled.h2`
   z-index: 1;
   font-size: 32px;
   font-weight: 900;
   padding-bottom: 32px;
-`
+`;

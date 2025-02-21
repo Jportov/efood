@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const breakpoints = {
-  tablet: '768px',
-  celular: '480px'
-}
+  tablet: "768px",
+  celular: "480px",
+};
 
 export const SectionList = styled.section`
   width: 100%; /* Fixing width to 100% for responsive design */
@@ -17,7 +17,7 @@ export const SectionList = styled.section`
     margin-top: 15%;
     margin-bottom: 15%;
   }
-`
+`;
 
 export const List = styled.ul`
   display: grid;
@@ -33,4 +33,4 @@ export const List = styled.ul`
     column-gap: 0;
     row-gap: 20px;
   }
-`
+`;

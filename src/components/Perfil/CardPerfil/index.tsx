@@ -1,7 +1,7 @@
-import { useDispatch } from 'react-redux'
-import { useState } from 'react'
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 
-import { open, add } from '../../../store/reducer/cart'
+import { open, add } from "../../../store/reducer/cart";
 
 import {
   CardContainer,
@@ -11,36 +11,36 @@ import {
   Modal,
   PerfilDetails,
   PerfilModal,
-  BotaoPerfil
-} from './styles'
+  BotaoPerfil,
+} from "./styles";
 
-import { Prato } from '../../../types/Restaurante'
+import { Prato } from "../../../types/Restaurante";
 
-import Botao from '../ButtonPerfil'
-import Fechar from '../../../assets/images/fechar.png'
+import Botao from "../ButtonPerfil";
+import Fechar from "../../../assets/images/fechar.png";
 
 type Props = {
-  prato: Prato
-}
+  prato: Prato;
+};
 const CardPerfil = ({ prato }: Props) => {
-  const [modalAberto, setModalAberto] = useState(false)
-  const dispatch = useDispatch()
+  const [modalAberto, setModalAberto] = useState(false);
+  const dispatch = useDispatch();
 
   const OpenCart = () => {
-    dispatch(open())
-  }
+    dispatch(open());
+  };
 
   const AddToCart = () => {
-    dispatch(add(prato))
-  }
+    dispatch(add(prato));
+  };
 
   const limitarDescricao = (descricao: string) => {
     if (descricao.length > 160) {
-      return descricao.substring(0, 160) + '...'
+      return descricao.substring(0, 160) + "...";
     }
 
-    return descricao
-  }
+    return descricao;
+  };
 
   return (
     <>
@@ -58,7 +58,7 @@ const CardPerfil = ({ prato }: Props) => {
           </Botao>
         </div>
       </CardContainer>
-      <Modal className={modalAberto ? 'visible' : ''}>
+      <Modal className={modalAberto ? "visible" : ""}>
         <PerfilModal className="container">
           <div>
             <ImagePerfil src={prato.foto} alt="imagem da pizza" />
@@ -73,13 +73,13 @@ const CardPerfil = ({ prato }: Props) => {
             </DescriptionPerfil>
             <BotaoPerfil
               onClick={() => {
-                OpenCart()
-                AddToCart()
-                setModalAberto(false)
+                OpenCart();
+                AddToCart();
+                setModalAberto(false);
               }}
             >
-              Adicionar ao carrinho - R${' '}
-              {parseFloat(prato.preco).toFixed(2).replace('.', ',')}
+              Adicionar ao carrinho - R${" "}
+              {parseFloat(prato.preco).toFixed(2).replace(".", ",")}
             </BotaoPerfil>
           </PerfilDetails>
           <ImageFechar
@@ -91,7 +91,7 @@ const CardPerfil = ({ prato }: Props) => {
         <div className="overlay" onClick={() => setModalAberto(false)}></div>
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export default CardPerfil
+export default CardPerfil;

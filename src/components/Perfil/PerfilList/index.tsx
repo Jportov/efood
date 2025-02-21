@@ -1,10 +1,10 @@
-import { Prato } from '../../../types/Restaurante'
-import CardPerfil from '../CardPerfil'
-import { OpcoesContainer, PerfilList } from './styles'
+import { Prato } from "../../../types/Restaurante";
+import CardPerfil from "../CardPerfil";
+import { OpcoesContainer, PerfilList } from "./styles";
 
 type Props = {
-  pratos: Prato[]
-}
+  pratos: Prato[];
+};
 
 const OpcoesPerfil = ({ pratos }: Props) => {
   return (
@@ -21,7 +21,7 @@ const OpcoesPerfil = ({ pratos }: Props) => {
                   nome: prato.nome,
                   porcao: prato.porcao,
                   preco: prato.preco,
-                  id: prato.id
+                  id: prato.id,
                 }}
               />
             </li>
@@ -29,9 +29,7 @@ const OpcoesPerfil = ({ pratos }: Props) => {
         </PerfilList>
       </OpcoesContainer>
     </>
-  )
-}
+  );
+};
 
-export default OpcoesPerfil
-
-
+export default OpcoesPerfil;

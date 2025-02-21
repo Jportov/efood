@@ -1,10 +1,10 @@
-import { Restaurante } from '../../../types/Restaurante'
-import Cardapio from '../Cardapio'
-import { List, SectionList } from './styles'
+import { Restaurante } from "../../../types/Restaurante";
+import Cardapio from "../Cardapio";
+import { List, SectionList } from "./styles";
 
 type Props = {
-  restaurante: Restaurante[]
-}
+  restaurante: Restaurante[];
+};
 
 const CardapioList = ({ restaurante }: Props) => (
   <SectionList>
@@ -23,6 +23,6 @@ const CardapioList = ({ restaurante }: Props) => (
       ))}
     </List>
   </SectionList>
-)
+);
 
-export default CardapioList
+export default CardapioList;

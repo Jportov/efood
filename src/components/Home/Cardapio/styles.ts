@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-import { cores } from '../../../styles'
-import { breakpoints } from '../CardapioList/styles'
+import styled from "styled-components";
+import { cores } from "../../../styles";
+import { breakpoints } from "../CardapioList/styles";
 
-import { Restaurante } from '../../../types/Restaurante'
+import { Restaurante } from "../../../types/Restaurante";
 
-export const ImgCardapio = styled.div<Pick<Restaurante, 'capa'>>`
+export const ImgCardapio = styled.div<Pick<Restaurante, "capa">>`
   width: 100%;
   max-width: 400px; /* Diminuir largura máxima */
   height: 200px; /* Diminuir altura */
@@ -17,13 +17,13 @@ export const ImgCardapio = styled.div<Pick<Restaurante, 'capa'>>`
   @media (max-width: ${breakpoints.tablet}) {
     max-width: none;
   }
-`
+`;
 
 export const Etiqueta = styled.span`
   position: relative;
   top: 16px;
   right: 8px;
-`
+`;
 
 export const CardCadapio = styled.div`
   margin: 0 auto; /* Fixed margin value */
@@ -33,7 +33,7 @@ export const CardCadapio = styled.div`
   @media (max-width: ${breakpoints.tablet}) {
     margin-bottom: 8%; /* Diminuir margem inferior */
   }
-`
+`;
 
 export const CadapiorListaTag = styled.ul`
   display: flex;
@@ -51,7 +51,7 @@ export const CadapiorListaTag = styled.ul`
   li:nth-child(2) {
     padding: 8px 8px 0 8px;
   }
-`
+`;
 
 export const Borda = styled.div`
   width: 100%;
@@ -78,13 +78,13 @@ export const Borda = styled.div`
     margin: 6px 6px; /* Diminuir margem */
     transition: background-color 0.3s; /* Adiciona efeito de transição */
   }
-`
+`;
 
 export const TextCardapio = styled.p`
   margin: 16px 8px;
   line-height: 22px;
   font-size: 12px; /* Diminuir tamanho da fonte */
-`
+`;
 export const Nota = styled.div`
   display: flex;
   align-items: center;
@@ -93,7 +93,7 @@ export const Nota = styled.div`
   p {
     padding-right: 8px;
   }
-`
+`;
 export const ImgEstrela = styled.img`
   padding-left: 8px;
-`
+`;

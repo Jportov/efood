@@ -1,5 +1,5 @@
-import { HeroContainer, HeroText, ImgHero } from './styles'
-import Logo from '../../../assets/images/logo.png'
+import { HeroContainer, HeroText, ImgHero } from "./styles";
+import Logo from "../../../assets/images/logo.png";
 
 const Hero = () => (
   <HeroContainer>
@@ -9,6 +9,6 @@ const Hero = () => (
       no conforto da sua casa
     </HeroText>
   </HeroContainer>
-)
+);
 
-export default Hero
+export default Hero;

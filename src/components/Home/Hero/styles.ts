@@ -1,13 +1,13 @@
-import styled from 'styled-components'
-import Vector from '../../../assets/images/vector.png'
-import { cores } from '../../../styles'
-import { breakpoints } from '../CardapioList/styles'
+import styled from "styled-components";
+import Vector from "../../../assets/images/vector.png";
+import { cores } from "../../../styles";
+import { breakpoints } from "../CardapioList/styles";
 
 export const HeroContainer = styled.div`
   text-align: center;
   padding-bottom: 20px;
   background-image: url(${Vector});
-`
+`;
 export const HeroText = styled.div`
   font-weight: 700;
   font-size: 24px;
@@ -20,7 +20,7 @@ export const HeroText = styled.div`
     margin-top: 10%; /* Ajuste a margem superior para melhorar a responsividade */
     font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
   }
-`
+`;
 
 export const ImgHero = styled.img`
   margin-top: 40px;
@@ -30,4 +30,4 @@ export const ImgHero = styled.img`
   @media (max-width: ${breakpoints.tablet}) {
     width: 30%;
   }
-`
+`;

@@ -1,9 +1,9 @@
-import { ButtonPerfil } from './styled'
+import { ButtonPerfil } from "./styled";
 
 export type Props = {
-  children: string
-  onClick?: () => void
-}
+  children: string;
+  onClick?: () => void;
+};
 
 const Botao = ({ children, onClick }: Props) => (
   <>
@@ -11,6 +11,6 @@ const Botao = ({ children, onClick }: Props) => (
       {children}
     </ButtonPerfil>
   </>
-)
+);
 
-export default Botao
+export default Botao;

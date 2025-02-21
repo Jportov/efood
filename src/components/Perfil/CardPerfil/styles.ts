@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { cores } from '../../../styles'
-import { breakpoints } from '../../Home/CardapioList/styles'
-import { ButtonPerfil } from '../ButtonPerfil/styled'
+import { cores } from "../../../styles"
+import { breakpoints } from "../../Home/CardapioList/styles"
+import { ButtonPerfil } from "../ButtonPerfil/styled"
 
 export const CardContainer = styled.div`
   max-width: 320px;
@@ -73,7 +73,7 @@ export const Modal = styled.div`
     top: 0;
     left: 0;
     opacity: 0.5;
-    content: '';
+    content: "";
   }
 `
 

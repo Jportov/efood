@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { Prato } from '../../types/Restaurante'
+import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { Prato } from "../../types/Restaurante"
 
 type CartState = {
   items: Prato[] //cuidado, talvez seja cardapio
@@ -12,7 +12,7 @@ const initialState: CartState = {
 }
 
 const cartSlice = createSlice({
-  name: 'cart',
+  name: "cart",
   initialState,
   reducers: {
     add: (state, action: PayloadAction<Prato>) => {
@@ -21,7 +21,7 @@ const cartSlice = createSlice({
       if (!prato) {
         state.items.push(action.payload)
       } else {
-        alert('Este prato já está no carrinho')
+        alert("Este prato já está no carrinho")
       }
     },
     remove: (state, action: PayloadAction<number>) => {

@@ -34,17 +34,4 @@ const OpcoesPerfil = ({ pratos }: Props) => {
 
 export default OpcoesPerfil
 
-{
-  /* <li>
-{pratos.map((prato) => ( props separadas, não esta de acordo com a props declarada no CardPerfil
-  <CardPerfil
-    key={prato.cardapio.id}
-    foto={prato.cardapio.foto}
-    descricao={prato.cardapio.descricao}
-    nome={prato.cardapio.nome}
-    porcao={prato.cardapio.porcao}
-    preco={prato.cardapio.preco}
-  />
-))}
-</li> */
-}
+

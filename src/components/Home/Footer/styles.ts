@@ -13,14 +13,14 @@ export const FooterContainer = styled.div`
   background-color: ${cores.trigo};
 
   p {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
 `
 
 export const FooterList = styled.ul`
   justify-content: center;
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 40px; /* Adjusted margin to improve spacing */
 
   li:nth-child(2) {
     margin: 0 8px;

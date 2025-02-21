@@ -6,11 +6,13 @@ import { Restaurante } from '../../../types/Restaurante'
 
 export const ImgCardapio = styled.div<Pick<Restaurante, 'capa'>>`
   width: 100%;
-  max-width: 472px;
-  height: 217px;
+  max-width: 400px; /* Diminuir largura máxima */
+  height: 200px; /* Diminuir altura */
   background-image: url(${(props) => props.capa});
   flex-direction: row-reverse;
   display: flex;
+  border-radius: 8px 8px 0 0; /* Adiciona bordas arredondadas na parte superior */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas arredondadas */
 
   @media (max-width: ${breakpoints.tablet}) {
     max-width: none;
@@ -24,8 +26,12 @@ export const Etiqueta = styled.span`
 `
 
 export const CardCadapio = styled.div`
+  margin: 0 auto; /* Fixed margin value */
+  &:hover {
+    transform: translateY(-4px);
+  }
   @media (max-width: ${breakpoints.tablet}) {
-    margin-bottom: 10%;
+    margin-bottom: 8%; /* Diminuir margem inferior */
   }
 `
 
@@ -34,12 +40,12 @@ export const CadapiorListaTag = styled.ul`
   align-items: center;
   justify-content: space-between;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px; /* Diminuir tamanho da fonte para melhorar a responsividade */
 
   h3 {
     margin-top: 8px;
     margin-left: 8px;
-    line-height: 22px;
+    line-height: 20px; /* Diminuir altura da linha */
   }
 
   li:nth-child(2) {
@@ -48,29 +54,36 @@ export const CadapiorListaTag = styled.ul`
 `
 
 export const Borda = styled.div`
+  width: 100%;
+  justify-content: space-between;
+  max-width: 400px;
   border-style: solid;
   border-width: 1px; /* Ajuste a largura conforme necessário */
   border-color: transparent ${cores.salmao} ${cores.salmao} ${cores.salmao};
   background-color: ${cores.branca};
   color: ${cores.salmao};
+  border-radius: 0 0 8px 8px; /* Adiciona bordas arredondadas na parte inferior */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas arredondadas */
 
   a {
-    color: ${cores.trigo};
+    width: 70px;
+    color: ${cores.branca};
     background-color: ${cores.salmao};
-    border: none;
-    padding: 4px 6px;
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+    padding: 3px 5px; /* Diminuir padding */
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px; /* Diminuir tamanho da fonte */
     text-decoration: none;
     display: inline-block;
-    margin: 8px 8px;
+    margin: 6px 6px; /* Diminuir margem */
+    transition: background-color 0.3s; /* Adiciona efeito de transição */
   }
 `
 
 export const TextCardapio = styled.p`
   margin: 16px 8px;
   line-height: 22px;
-  font-size: 14px;
+  font-size: 12px; /* Diminuir tamanho da fonte */
 `
 export const Nota = styled.div`
   display: flex;

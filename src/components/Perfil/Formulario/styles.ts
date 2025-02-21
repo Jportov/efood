@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { ButtonPerfil } from '../ButtonPerfil/styled'
 import { cores } from '../../../styles'
+import { ButtonPerfil } from '../ButtonPerfil/styled'
 
 export const ContentFormulario = styled.div`
   color: ${cores.trigo};
@@ -29,6 +29,7 @@ export const ContentFormulario = styled.div`
   ${ButtonPerfil} {
     display: block;
     margin-bottom: 8px;
+    border-radius: 8px; /* Adiciona bordas arredondadas */
   }
 `
 export const Ajuste = styled.div`

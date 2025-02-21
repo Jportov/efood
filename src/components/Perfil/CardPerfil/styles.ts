@@ -1,19 +1,26 @@
 import styled from 'styled-components'
 
 import { cores } from '../../../styles'
-import { ButtonPerfil } from '../ButtonPerfil/styled'
 import { breakpoints } from '../../Home/CardapioList/styles'
+import { ButtonPerfil } from '../ButtonPerfil/styled'
 
 export const CardContainer = styled.div`
   max-width: 320px;
   width: 100%;
+  height: 100%;
   color: ${cores.trigo};
   background-color: ${cores.salmao};
   padding: 8px;
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas arredondadas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   img {
-    width: 304px;
-    height: 167px;
+    width: 100%;
+    height: 200px; /* Changed height to auto for better responsiveness */
+    max-width: 100%;
 
     @media (max-width: ${breakpoints.tablet}) {
       width: 100%;
@@ -21,10 +28,11 @@ export const CardContainer = styled.div`
   }
 
   @media (max-width: ${breakpoints.tablet}) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 8%;
-    max-width: none;
-    width: 90%;
   }
 `
 
@@ -74,23 +82,26 @@ export const PerfilModal = styled.div`
   display: flex;
   background-color: ${cores.salmao};
   z-index: 1;
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas arredondadas */
 
   h3 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 900;
   }
 
   @media (max-width: ${breakpoints.tablet}) {
     display: block;
-    width: 90%;
+    width: 80%; /* Adjusted width for responsiveness */
+    height: auto; /* Updated height for responsiveness */
   }
 `
 export const PerfilDetails = styled.div`
   color: ${cores.branca};
-  margin: 32px 32px 32px 24px;
-
+  margin: 0;
+  padding: 8px;
   @media (max-width: ${breakpoints.tablet}) {
-    margin: 4% 3%;
+    margin: 1px 1px;
   }
 
   ${DescriptionPerfil} {
@@ -98,9 +109,10 @@ export const PerfilDetails = styled.div`
   }
 
   ${ButtonPerfil} {
-    width: auto;
     padding: 4px 8px;
     margin: 0;
+    background-color: ${cores.trigo};
+    border-radius: 8px; /* Adiciona bordas arredondadas */
   }
 `
 export const ImageFechar = styled.img`
@@ -114,24 +126,24 @@ export const ImageFechar = styled.img`
 export const ImagePerfil = styled.img`
   width: 280px;
   height: 280px;
-  margin: 32px 0 32px 32px;
+  margin: 32px 32px 32px 32px;
 
   @media (max-width: ${breakpoints.tablet}) {
     margin: 0 auto;
     width: 100%;
     height: 150px;
     padding: 2%;
-    height: 150px;
   }
 `
 export const BotaoPerfil = styled.button`
   color: ${cores.salmao};
   background-color: ${cores.trigo};
-  border: none;
-  width: auto%;
+  width: 100%;
   padding: 4px 8px;
   font-weight: 700;
   font-size: 14px;
   text-align: center;
   cursor: pointer;
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+  border: none; /* Re-adding border property for styling */
 `

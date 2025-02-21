@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
 
 import {
-  CardCadapio,
-  TextCardapio,
   Borda,
-  ImgCardapio,
   CadapiorListaTag,
+  CardCadapio,
   Etiqueta,
+  ImgCardapio,
+  ImgEstrela,
   Nota,
-  ImgEstrela
+  TextCardapio
 } from './styles'
 
 import Estrela from '../../../assets/images/estrela.png'
@@ -27,8 +27,8 @@ const Cardapio = ({
   destacado
 }: Props) => {
   const limitarDescricao = (descricao: string) => {
-    if (descricao.length > 196) {
-      return descricao.substring(0, 196) + '...'
+    if (descricao.length > 190) {
+      return descricao.substring(0, 190) + '...'
     }
 
     return descricao

@@ -2,10 +2,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../../store'
 import { useValorTotal } from '../../../Uteis'
 
-import { remove } from '../../../store/reducer/cart'
-import { Cards, ImgFechar, ImgPrato, Valor } from '../Carrinho/styles'
 import Lixeira from '../../../assets/images/Lixeira.png'
+import { remove } from '../../../store/reducer/cart'
 import { ButtonPerfil } from '../ButtonPerfil/styled'
+import { Cards, ImgFechar, ImgPrato, Valor } from '../Carrinho/styles'
 import { ContainerRec } from '../Formulario/styles'
 
 interface ItensCarrinhoProps {
@@ -49,8 +49,8 @@ const ItensCarrinho = ({ avancaParaEntrega }: ItensCarrinhoProps) => {
             ))}
           </ul>
           <Valor>
-            <li>Valor total</li>
-            <li>R$ {Total}</li>
+            <li>Valor total: </li>
+            <li> R$ {Total}</li>
           </Valor>
           <ButtonPerfil onClick={avancaParaEntrega}>
             Continuar a entrega

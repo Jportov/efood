@@ -25,6 +25,7 @@ export const GlobalCss = createGlobalStyle`
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    padding: 0 16px; /* Adiciona padding para melhorar a responsividade */
   }
-
 `

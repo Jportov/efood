@@ -11,7 +11,7 @@ export const PerfilList = styled.ul`
   justify-content: space-between;
   align-items: center;
   color: ${cores.salmao};
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
 
   li:first-child {

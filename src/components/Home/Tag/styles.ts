@@ -10,4 +10,5 @@ export const TagContainer = styled.div<{ destacado?: boolean }>`
   padding: 6px 10px;
   display: inline-block;
   background-color: ${(props) => (props.destacado ? 1 : 0)};
+  border-radius: 8px;
 `
